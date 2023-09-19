@@ -4,7 +4,6 @@ def binary_search(array, begin_index, end_index, key, step):
     if begin_index > end_index:
         return -1
     middle = (begin_index + end_index) // 2
-    #print(begin_index, end_index, middle)
     if array[middle] == key:
         return step
     elif array[middle] < key:
@@ -14,6 +13,7 @@ def binary_search(array, begin_index, end_index, key, step):
 
 size = int(input("Введите размер массива: "))
 array = [a + 1 for a in range(size)]
+#можно задать или ввести массив вручную
 #array = [1, 2, 3, 4, 19, 30, 31, 33]
 key = int(input("Введите искомый элемент: "))
 print(binary_search(array, 0, len(array)  - 1, key, 1))
